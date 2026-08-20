@@ -7,49 +7,39 @@ Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 
 package dsa.arrays;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class MergeSortedArray {
 
-    public static void MergeTwoArr(int[] num1, int[] num2){
-        int n1 = num1.length;
-        int n2 = num2.length;
-
-        int[] num3 = new int[n1+n2];
-
-        int i = 0; // num1 ke liya pointer
-        int j = 0; // num2 ke liya pointer
-        int k = 0; // num3 ke liya pointer
-
-
-//        find smallest elements
-        while (i<n1 && j<n2){
-            if(num1[i] <= num2[j]){
-                num3[k++] = num1[i++];
-            }else{
-                num3[k++] = num2[j++];
-            }
+    public static void merge(int[] num1, int[] num2){
+        ArrayList<Integer> list = new ArrayList<>();
+//        Add first array
+        for(int num: num1){
+            list.add(num);
         }
 
-//        Agar num1 mein elements bache hon to
-        while (i<n1){
-            num3[k++] = num1[i++];
+//        Add second array
+        for(int num: num2){
+            list.add(num);
         }
 
+//      sort array
+        Collections.sort(list);
 
-//        Agar num2 mein elements bache hon to
-        while (j<n2){
-            num3[k++] = num2[j++];
+//        print list
+        for(int num: list){
+            System.out.print(num+" ");
         }
+    }
 
-        System.out.println("Merage sorted arrays: "+ Arrays.toString(num3));
-
-        }
 
     public static void main(String[] args) {
-        int[] num1 = {1,2,5};
-        int[] num2 = {4,6,8};
+        int[] arr1 = {10,20,30};
+        int[] arr2 = {15,25,35};
 
-        MergeTwoArr(num1, num2);
+        merge(arr1,arr2);
     }
 }
