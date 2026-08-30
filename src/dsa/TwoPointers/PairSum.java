@@ -17,7 +17,7 @@ public class PairSum {
                 System.out.println(nums[left]+","+nums[right]);
                 left++;
                 right--;
-            }else if(sum < target){
+            }else  if(sum < target){
                 left++;
             }else {
                 right--;
