@@ -16,20 +16,27 @@ public class LargestEvenNumber {
             arr[i] = sc.nextInt();
         }
 
-        int LE = 0;
+        int LE = Integer.MIN_VALUE;
+        boolean found = false;
 
         // Finding largest even number
         for (int i = 0; i < arr.length; i++) {
 
             if (arr[i] % 2 == 0) {
-
+                found = true;
                 if (arr[i] > LE) {
                     LE = arr[i];
                 }
             }
         }
 
-        System.out.println("Largest Even Number: " + LE);
+        if(found){
+            System.out.println("Largest No: "+ LE);
+        }else{
+            System.out.println("No Even number found....");
+        }
+
+
 
         sc.close();
     }
