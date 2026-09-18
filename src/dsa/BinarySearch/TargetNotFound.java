@@ -22,8 +22,12 @@ public class TargetNotFound {
 
 
     public static void main(String[] args) {
-        int[] arr = {2, 5, 8, 12, 16, 20, 25};
-        int target = 15;
+//        int[] arr = {2, 5, 8, 12, 16, 20, 25};
+        //        int target = 15;
+
+        int[] arr = {2,4,4,4,6,8,10};
+
+        int target = 4;
 
         int result =  findTarget(arr, target);
 
