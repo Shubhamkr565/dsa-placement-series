@@ -8,6 +8,7 @@ public class PeakElement {
 
         while (left<right){
             int mid = left+(right-left)/2;
+            System.out.println(mid+" "+nums[mid]);
 
             if(nums[mid] < nums[mid+1]){
 //            peek element must be right side
