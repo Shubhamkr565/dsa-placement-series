@@ -21,6 +21,7 @@ public class ContainerWithMostWater {
                 right--;
             }
 
+            // Keep the maximum water found so far
             mostWater = Math.max(mostWater, currentWater);
         }
         return mostWater;
