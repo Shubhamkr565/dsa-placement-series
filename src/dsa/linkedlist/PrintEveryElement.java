@@ -21,10 +21,14 @@ public class PrintEveryElement {
         third.next = null;
 
         Node head = first;
+        int count = 0;
 
         while (head!=null){
             System.out.println(head.data);
+            count++;
             head = head.next;
         }
+
+        System.out.println("Total number of Nodes: "+count);
     }
 }
