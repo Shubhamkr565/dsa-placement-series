@@ -27,18 +27,31 @@ public class DeleteAtEnd {
         temp.next = newNode;
     }
 
-    public void deleteAtEnd(){
-        if(head == null){
-            System.out.println("Linked List is Empty:");
+
+    public void deleteAtEnd() {
+        if (head == null) {
+            System.out.println("Linked List is Empty");
             return;
         }
+
+        // Case 1: Only one node
+        if (head.next == null) {
+            System.out.println("Delete Last Node: " + head.data);
+            head = null;
+            return;
+        }
+
+        // Case 2: Multiple nodes
         Node temp = head;
-        while (temp.next.next != null){
+
+        while (temp.next.next != null) {
             temp = temp.next;
         }
-        System.out.println("Delete Last Node: "+temp.next.data);
+
+        System.out.println("Delete Last Node: " + temp.next.data);
         temp.next = null;
     }
+
 
     public void display(){
         if(head == null){
