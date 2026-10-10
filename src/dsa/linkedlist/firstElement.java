@@ -17,6 +17,7 @@ public class firstElement {
         Node second = new Node(20);
         Node third = new Node(30);
         Node four = new Node(40);
+        Node five = new Node(40);
 
         first.next = second;
         second.next = third;
